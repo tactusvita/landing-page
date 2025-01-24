@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css?family=SF%20Pro%20Display:700|SF%20Pro%20Text:400');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+:root {
+    /* Primary Colors */
+    --color-primary-blue: #0F52BA;
+    --color-secondary-slate: #647693;
+    --color-accent-teal: #20B2AA;
+
+    /* Neutrals */
+    --color-neutral-900: #2D3648;
+    --color-neutral-600: #6B7280;
+    --color-neutral-50: #F8FAFC;
+
+    /* Typography */
+    --font-primary: 'SF Pro Text', system-ui, -apple-system, sans-serif;
+    --font-interface: 'SF Pro Display', system-ui, -apple-system, sans-serif;
+    --text-xs: 0.75rem;     /* 12px - Fine print */
+    --text-sm: 0.875rem;    /* 14px - UI elements */
+    --text-base: 1rem;      /* 16px - Body text */
+    --text-lg: 1.125rem;    /* 18px - Important content */
+    --text-xl: 1.25rem;     /* 20px - Subheadings */
+    --text-2xl: 1.5rem;     /* 24px - Section headers */
+    --text-3xl: 1.875rem;   /* 30px - Page titles */
+    --text-4xl: 2.25rem;    /* 36px - Main headlines */
+
+    /* Spacing - base unit: 4px */
+    --space-1: 0.25rem;    /*  4px - Tiny details */
+    --space-2: 0.5rem;     /*  8px - Tight spacing */
+    --space-3: 0.75rem;    /* 12px - Compact elements */
+    --space-4: 1rem;       /* 16px - Standard spacing */
+    --space-5: 1.5rem;     /* 24px - Related elements */
+    --space-6: 2rem;       /* 32px - Section spacing */
+    --space-8: 3rem;       /* 48px - Large separation */
+    --space-10: 4rem;      /* 64px - Major sections */
+    --space-12: 6rem;      /* 96px - Page-level spacing */
+
+    /* Misc */
+    --max-width: 1200px;
+    --border-radius: 0.5rem;    /* 8px */
+}
+
+/* Base Styles */
+body {
+    font-family: var(--font-primary);
+    font-weight: 400;
+    line-height: 1.6;
+
+    color: var(--color-neutral-900);
+    background: var(--color-neutral-50);
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: var(--font-interface);
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+html { font-size: 100%; } /* 16 px */
+
+h1 {font-size: var(--text-4xl); }
+
+h2 {font-size: var(--text-3xl); }
+
+h3 {font-size: var(--text-2xl); }
+
+h4 {font-size: var(--text-xl); }
+
+h5 {font-size: var(--text-lg); }
+
+p {font-size: var(--text-base); }
+
+small {font-size: var(--text-sm); }
+
+/* Layout */
+.container {
+    width: min(var(--max-width), 100% - 2rem);
+    margin-inline: auto;
+}
+
+/* Navigation */
+.nav {
+    padding: var(--space-4) 0;
+}
+
+.nav__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: var(--color-neutral-600);
+    margin-left: var(--space-4);
+    padding: 0 var(--space-2);
+    position: relative;
+    transition: all 0.2s ease;
+
+    text-decoration: none;
+
+    /* Hover state */
+    &:hover {
+        color: var(--color-primary-blue);
+    }
+
+    /* Active/Current page state */
+    &.active {
+        color: var(--color-primary-blue);
+        font-weight: 500;
+    }
+
+    /* Click/Press state */
+    &:active {
+        color: color-mix(in srgb, var(--color-primary-blue) 80%, black);
+    }
+}
+
+/* Hero section */
+.hero {
+    padding: var(--space-12) 0;
+    text-align: center;
+}
+
+.hero__title {
+    font-size: var(--text-3xl);
+    margin-bottom: var(--space-4);
+}
+
+.hero__subtitle {
+    font-size: var(--text-xl);
+    color: var(--color-secondary-slate);
+    margin-bottom: var(--space-6);
+    max-width: 60ch;
+    margin-inline: auto;
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    padding: var(--space-2) var(--space-4);
+    color: white;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+
+    font-size: var(--text-sm);
+    font-weight: 500;
+    line-height: 1;
+
+    /* Normal state */
+    background: var(--color-accent-teal);
+    transition: all 0.2s ease;
+
+    /* Hover state - 10% darker */
+    &:hover {
+        background: color-mix(in srgb, var(--color-accent-teal) 90%, black);
+    }
+
+    /* Active/Pressed state - 20% darker */
+    &:active {
+        background: color-mix(in srgb, var(--color-accent-teal) 80%, black);
+    }
+
+    /* Focus state - with ring */
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(32, 178, 170, 0.4); /* accent teal with opacity */
+    }
+}
+
+.button-secondary {
+    /* Normal state */
+    background: transparent;
+    border: 2px solid var(--color-secondary-slate);
+    color: var(--color-secondary-slate);
+
+    /* Hover state - light background */
+    &:hover {
+        background: color-mix(in srgb, var(--color-secondary-slate) 10%, transparent);
+    }
+
+    /* Active state - slightly darker */
+    &:active {
+        background: color-mix(in srgb, var(--color-secondary-slate) 20%, transparent);
+    }
+}
+
+/* Features Section */
+.features {
+    padding: var(--space-10) 0;
+}
+
+.features__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-6);
+}
+
+.feature {
+    padding: var(--space-6);
+}
+
+.feature h3 {
+    margin-bottom: var(--space-2);
+}
+
+/* CTA Section */
+.cta {
+    padding: var(--space-12) 0;
+    background: var(--color-secondary-slate);
+    color: white;
+    text-align: center;
+}
+
+.cta h2 {
+    margin-bottom: var(--space-2);
+}
+
+.cta p {
+    margin-bottom: var(--space-6);
+}
