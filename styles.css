@@ -401,7 +401,6 @@ nav a {
     flex-direction: row;
     align-items: start;
     gap: 64px;
-    padding-bottom: 96px;
 }
 
 .journey > .left {
@@ -422,6 +421,7 @@ nav a {
     width: 1px;
     border-left: 1px dashed var(--color-primary);
     margin-top: -1px;
+    height: 500px;
     border-style: dashed;
     border-image: repeating-linear-gradient(
         to bottom,
@@ -827,7 +827,7 @@ nav a {
     }
 
     .journey {
-        gap: 10px;
+        gap: 32px;
     }
 
     .testimonial-content {
@@ -840,6 +840,10 @@ nav a {
 
     .headshot-main {
         flex-direction: row;
+    }
+
+    .nav-items {
+        display: none;
     }
 }
 
@@ -899,6 +903,18 @@ nav a {
 
     .orgs {
         flex-direction: column;
+    }
+
+    .journey {
+        justify-content: center;
+    }
+
+    .journey > .right {
+        width: 20rem;
+    }
+
+    .journey > .right > p {
+        width: 100%;
     }
 }
 
@@ -963,6 +979,10 @@ nav a {
     }
 
     .large-card-footer {
+        display: none;
+    }
+
+    .journey > .left {
         display: none;
     }
 }
