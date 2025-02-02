@@ -8,21 +8,33 @@
     <title>TactusVita</title>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 
     <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
+
+    <!-- JS -->
+    <script src="carousel.js" defer></script>
+    <script src="email.js" defer></script>
 </head>
 <body>
     <header class="nav">
         <div class="container nav__content">
-        <div class="nav__logo">Your Logo</div>
-        <nav>
-            <a href="#features">Features</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-        </nav>
+            <a href="#">
+                <img src="static/logos/brand.svg" width="240px">
+            </a>
+            <nav class="nav-items">
+                <a href="#our-platform">Our Platform</a>
+                <a href="#science-and-tech">Science</a>
+                <a href="#meet-the-team">The Team</a>
+                <a href="#contact-us">Contact</a>
+            </nav>
         </div>
+        <a href="https://calendly.com/stefan-milosev/30min">
+            <div class="button">
+                Book a demo
+            </div>
+        </a>
     </header>
 
     <div class="dots" />
@@ -39,9 +51,11 @@
                             <p>Get started</p>
                         </div>
                     </a>
-                    <div class="button-secondary">
-                        <p>Book a demo</p>
-                    </div>
+                    <a href="https://calendly.com/stefan-milosev/30min">
+                        <div class="button-secondary">
+                            <p>Book a demo</p>
+                        </div>
+                    </a>
                 </div>
             </div>
             <div class="image-stack">
@@ -120,7 +134,7 @@
                             <p class="card-text">We integrate with hospital systems enabling interoperability across labs and data consolidation.</p>
                         </div>
                         <div class="card-img">
-                            <img src="static/assets/infra.svg" width="115px">
+                            <img src="static/assets/secure.svg" width="115px">
                         </div>
                     </div>
                     <div class="large-card">
@@ -151,7 +165,7 @@
                             <p class="card-text">We integrate with hospital systems enabling interoperability across labs and data consolidation.</p>
                         </div>
                         <div class="card-img">
-                            <img src="static/assets/infra.svg" width="115px">
+                            <img src="static/assets/brain.svg" width="115px">
                         </div>
                     </div>
                 </div>
@@ -228,7 +242,7 @@
                 <div class="small-card">
                     <div class="card-content">
                         <div class="card-title">
-                            <img src="static/assets/bolt.svg">
+                            <img src="static/assets/eye.svg">
                             <p>UNA: Cellular Navigator</p>
                         </div>
                         <p class="card-text">
@@ -239,10 +253,11 @@
                         </p>
                     </div>
                 </div>
+                <img src="static/assets/ai.svg" width="40px">
                 <div class="small-card">
                     <div class="card-content">
                         <div class="card-title">
-                            <img src="static/assets/bolt.svg">
+                            <img src="static/assets/target.svg">
                             <p>TSAR: Therapy Strategist</p>
                         </div>
                         <p class="card-text">
@@ -257,17 +272,231 @@
             </div>
         </section>
 
-        <!--
         <section id="science-and-tech">
             <div class="section-title">
                 <div class="separator"></div>
                 <h4 class="title">SCIENCE & TECHNOLOGY</h4>
                 <p class="subtitle">We integrate multi-omic information into the decision layers of our predictive models</p>
             </div>
+            <div class="carousel">
+                <div class="carousel-container">
+                    <div class="carousel-card active">
+                        <img src="static/assets/carousel1.png">
+                        <div class="carousel-content">
+                            <h4>Single-Cell Analysis</h4>
+                            <p>TactusVita utilizes advanced single-cell analysis to examine cellular dynamics at an unprecedented resolution. By investigating gene interactions, regulatory pathways, and cellular behavior, the platform identifies key patterns that influence health and disease progression. These insights enable the discovery of precise therapy targets, driving breakthroughs in precision medicine and innovative research.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-card">
+                        <img src="static/assets/carousel2.png">
+                        <div class="carousel-content">
+                            <h4>Heterogeneous Graph Networks</h4>
+                            <p>TactusVita employs heterogeneous graph networks to map relationships between therapies, genes, and patient-specific factors. UNA uses these networks to uncover molecular and genomic interactions, while TSAR ranks therapies based on efficacy and compatibility. Together, they enable clinicians and researchers to navigate and analyze complex datasets for more effective decision-making.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-card">
+                        <img src="static/assets/carousel3.png">
+                        <div class="carousel-content">
+                            <h4>Geometric Deep Learning</h4>
+                            <p>Geometric deep learning powers TactusVita's ability to analyze multi-dimensional data, from tumor progression to cellular pathway dynamics. UNA leverages this technology to identify intricate gene interactions, while TSAR applies it to predict therapy success and toxicity risks. This ensures the platform delivers highly accurate insights for both patient care and clinical trial optimization.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-card">
+                        <img src="static/assets/carousel4.png">
+                        <div class="carousel-content">
+                            <h4>Advanced Genomics</h4>
+                            <p>TactusVita integrates advanced genomics by processing in vitro, ex vivo, and in vivo data, including genetic tests, organoid sensitivity assays, and imaging results. UNA analyzes genomic pathways to pinpoint actionable targets, while TSAR uses these findings to rank therapies and refine treatment strategies. This combination accelerates discoveries in precision medicine and enhances outcomes for patients and clinical trials.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <div class="carousel-left">←</div>
+                    <div class="carousel-dots"></div>
+                    <div class="carousel-right">→</div>
+                </div>
+            </div>
         </section>
-        -->
-    </main>
 
+        <section id="testimonials">
+            <div class="section-title">
+                <div class="separator"></div>
+                <h4 class="title">TESTIMONIALS</h4>
+                <p class="subtitle">Hear directly from our early-adopters</p>
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-content">
+                    <img src="static/assets/quotation.png">
+                    <p>The vision behind TactusVita is <span class="soft-bold">incredibly promising</span>. I see how their approach to combining advanced analytics and real-time decision-making could create a <span class="soft-bold">transformative impact</span> in the field of precision medicine.</p>
+                </div>
+                <div class="testimonial-headshot">
+                    <img src="static/headshots/tomislav.jpeg">
+                    <div class="testimonial-details">
+                        <p class="testimonial-name">Tomislav Dragovich PhD, MD</p>
+                        <p class="testimonial-org">Baptist MD Medical Center</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-headshot">
+                    <img src="static/headshots/tripkovic.jpeg">
+                    <div class="testimonial-details">
+                        <p class="testimonial-name">Aleksandar Tripkovic</p>
+                        <p class="testimonial-org">AstraZeneca</p>
+                    </div>
+                </div>
+                <div class="testimonial-content" style="align-items: end;">
+                    <img src="static/assets/quotation.png" style="transform: scale(-1, -1);">
+                    <p>A company with the potential to <span class="soft-bold">accelerate clinical trials</span> and <span class="soft-bold">refine therapy strategies</span>. This is the kind of innovation the pharmaceutical industry needs in order to <span class="soft-bold">deliver precision treatments more effectively</span> to patients worldwide.</p>
+                </div>
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-content">
+                    <img src="static/assets/quotation.png">
+                    <p>TactusVita's platform is set to <span class="soft-bold">revolutionize precision medicine</span>. Its integration of advanced <span class="soft-bold">single-cell analysis</span> with <span class="soft-bold">AI-powered insights</span> stands to be a game-changer, enabling groundbreaking research and more <span class="soft-bold">personalized care for patients</span>. When I first heard about this idea, I immediately asked Stefan, <span class="soft-bold">“When can we start using this?”</span></p>
+                </div>
+                <div class="testimonial-headshot">
+                    <img src="static/headshots/nenad.jpg">
+                    <div class="testimonial-details">
+                        <p class="testimonial-name">Nenad Mijalkovic, MD</p>
+                        <p class="testimonial-org">Association of Digestive Oncology of Serbia</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="meet-the-team">
+            <div class="section-title">
+                <div class="separator"></div>
+                <h4 class="title">MEET THE TEAM</h4>
+            </div>
+            <div class="section-title">
+                <h2>Founders</h2>
+                <p class="subtitle">Diverse in background, we are committed to driving innovation in the healthcare space</p>
+            </div>
+            <div class="headshots">
+                <div class="headshot">
+                    <div class="headshot-main">
+                        <img src="static/headshots/sergio.png">
+                        <div class="headshot-details">
+                            <p class="headshot-name">Sergio Rivera</p>
+                            <p class="headshot-role">Co-founder & CTO</p>
+                        </div>
+                    </div>
+                    <div class="previous-roles">
+                        <p>PREVIOUS ROLES AT</p>
+                        <div class="logos">
+                            <img src="static/logos/gray/deloitte.png" width="215px">
+                            <img src="static/logos/gray/ibm.png" width="130px">
+                        </div>
+                    </div>
+                </div>
+                <div class="headshot">
+                    <div class="headshot-main">
+                        <img src="static/headshots/stefan.jpg">
+                        <div class="headshot-details">
+                            <p class="headshot-name">Stefan Milosevic</p>
+                            <p class="headshot-role">Co-founder & CEO</p>
+                        </div>
+                    </div>
+                    <div class="previous-roles">
+                        <p>PREVIOUS ROLES AT</p>
+                        <div class="logos">
+                            <img src="static/logos/gray/microsoft.png" width="215px">
+                            <img src="static/logos/gray/ccaim.png" width="200px">
+                        </div>
+                    </div>
+                </div>
+                <div class="headshot">
+                    <div class="headshot-main">
+                        <img src="static/headshots/aleks.jpeg">
+                        <div class="headshot-details">
+                            <p class="headshot-name">Aleksandra Markov</p>
+                            <p class="headshot-role">Co-founder & COO</p>
+                        </div>
+                    </div>
+                    <div class="previous-roles">
+                        <p>PREVIOUS ROLES AT</p>
+                        <div class="logos">
+                            <img src="static/logos/gray/bcg.png" width="200px">
+                            <img src="static/logos/gray/alphasights.png" width="220px">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-title">
+                <h2>Applied Science Committee</h2>
+                <p class="subtitle">Our global network of healthcare professionals help us maintain the highest of medical standards</p>
+            </div>
+            <div class="headshots">
+                <div class="headshot">
+                    <div class="headshot-main">
+                        <img src="static/headshots/tomislav.jpeg">
+                        <div class="headshot-details">
+                            <p class="headshot-name">Tomislav Dragovich PhD, MD</p>
+                            <p class="headshot-role">Head Clinical and Translational Advisor</p>
+                        </div>
+                    </div>
+                    <div class="previous-roles">
+                        <p>IN ASSOCIATION WITH</p>
+                        <div class="logos">
+                            <img src="static/logos/gray/anderson.png" width="160px">
+                        </div>
+                    </div>
+                </div>
+                <div class="headshot">
+                    <div class="headshot-main">
+                        <img src="static/headshots/nenad.jpg">
+                        <div class="headshot-details">
+                            <p class="headshot-name">Nenad Mijalkovic, MD</p>
+                            <p class="headshot-role">Director and Principal Advisor</p>
+                        </div>
+                    </div>
+                    <div class="previous-roles">
+                        <p>IN ASSOCIATION WITH</p>
+                        <div class="logos">
+                            <img src="static/logos/gray/ados.png" width="215px">
+                        </div>
+                    </div>
+                </div>
+                <div class="headshot">
+                    <div class="headshot-main">
+                        <img src="static/headshots/jelena.jpeg">
+                        <div class="headshot-details">
+                            <p class="headshot-name">Jelena Jevtovic, MD</p>
+                            <p class="headshot-role">Vice Chair of Research and Innovation</p>
+                        </div>
+                    </div>
+                    <div class="previous-roles">
+                        <p>IN ASSOCIATION WITH</p>
+                        <div class="logos">
+                            <img src="static/logos/gray/uccs.png" width="200px">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="previous-roles">
+                <p>AFFILIATED RESEARCH ORGANIZATIONS</p>
+                <div class="orgs">
+                    <img src="static/logos/rgb/esmo.png" width="180px">
+                    <img src="static/logos/rgb/asco.png" width="160px">
+                    <img src="static/logos/rgb/ieee.png" width="170px">
+                </div>
+            </div>
+        </section>
+
+        <section id="contact-us">
+            <div class="section-title">
+                <div class="separator"></div>
+                <h4 class="title">CONTACT US</h4>
+                <h2>Get in Touch</h2>
+                <p class="subtitle">Become part of our exciting ecosystem by sharing with us your contact details</p>
+            </div>
+            <form class="email-form" id="emailForm">
+                <input type="email" class="email-input" placeholder="Enter your email address" required>
+                <button type="submit" class="button">Submit</button>
+            </form>
+        </section>
+    </main>
     <footer class="footer">
         <p>&copy; 2025 TactusVita. All rights reserved. Illustrations by Soco St.</p>
     </footer>
