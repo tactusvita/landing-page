@@ -67,7 +67,7 @@ a {
 }
 
 a:visited {
-    color: inherit;
+    color: var(--color-text);
 }
 
 h1, h2, h3, h4, h5 {
@@ -163,23 +163,23 @@ section {
 }
 
 .una {
+    display: inline;
     background: #121FCF;
     background: linear-gradient(to top right, #121FCF 0%, #CF1512 100%);
     -webkit-background-clip: text;
     -moz-background-clip: text;
     background-clip: text;
-    -webkit-text-fill-color: transparent;
     color: transparent;
     font-weight: 600;
 }
 
 .tsar {
+    display: inline;
     background: #B6B908;
     background: linear-gradient(to top right, #B6B908 0%, #CF1512 100%);
     -webkit-background-clip: text;
     -moz-background-clip: text;
     background-clip: text;
-    -webkit-text-fill-color: transparent;
     color: transparent;
     font-weight: 600;
 }
