@@ -878,6 +878,10 @@ nav a {
         flex-direction: column;
     }
 
+    .headshot-first {
+        order: -1;
+    }
+
     .headshot-main {
         flex-direction: row;
     }
