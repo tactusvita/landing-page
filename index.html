@@ -14,14 +14,14 @@
     <link rel="stylesheet" href="styles.css">
 
     <!-- JS -->
-    <script src="carousel.js" defer></script>
-    <script src="email.js" defer></script>
+    <script src="js/carousel.js" defer></script>
+    <script src="js/email.js" defer></script>
 </head>
 <body>
     <header class="nav">
         <div class="container nav__content">
             <a href="#">
-                <img src="static/logos/brand.svg" width="240px">
+                <img src="static/logos/brand.svg" id="brand_logo">
             </a>
             <nav class="nav-items">
                 <a href="#our-platform">Our Platform</a>
@@ -31,7 +31,7 @@
             </nav>
         </div>
         <a href="https://calendly.com/stefan-milosev/30min">
-            <div class="button">
+            <div class="button" id="btn_navbar">
                 Book a demo
             </div>
         </a>
@@ -79,7 +79,7 @@
                                 <img src="static/assets/bolt.svg">
                                 <p>Seamless Integration</p>
                             </div>
-                            <p class="card-text">We integrate with hospital systems enabling interoperability across labs and data consolidation.</p>
+                            <p class="card-text">We integrate with hospital systems enabling <span class="soft-bold">interoperability across labs</span> and <span class="soft-bold">data consolidation.</span></p>
                         </div>
                         <div class="card-img">
                             <img src="static/assets/infra.svg" width="115px">
@@ -89,10 +89,10 @@
                         <div class="large-card-body">
                             <div class="card-content">
                                 <div class="card-title">
-                                    <img src="static/assets/person.svg">
+                                    <img src="static/assets/heart.svg">
                                     <p>Real-time Therapy Simulations</p>
                                 </div>
-                                <p class="card-text">Powered by predictive modeling and comparative analytics, clinicians can use our platform to validate preclinical findings.</p>
+                                <p class="card-text">Powered by <span class="soft-bold">predictive modeling</span> and <span class="soft-bold">comparative analytics</span>, clinicians can use our platform to <span class="soft-bold">validate preclinical findings</span>.</p>
                             </div>
                             <div class="large-card-footer">
                                 <div class="large-card-footer-title">
@@ -119,7 +119,7 @@
                                 <img src="static/assets/person.svg">
                                 <p>Personalized Insights</p>
                             </div>
-                            <p class="card-text">Our models, tailored for precision medicine, provide patient-unique recommendations.</p>
+                            <p class="card-text">Our models, tailored for <span class="soft-bold">precision medicine</span>, provide <span class="soft-bold">patient-unique recommendations</span>.</p>
                         </div>
                         <div class="card-img">
                             <img src="static/assets/man.svg" width="115px">
@@ -131,7 +131,7 @@
                                 <img src="static/assets/security.svg">
                                 <p>Secure by Default</p>
                             </div>
-                            <p class="card-text">We integrate with hospital systems enabling interoperability across labs and data consolidation.</p>
+                            <p class="card-text">All data stored in our platform is encrypted by design, which helps us ensure <span class="soft-bold">GDPR</span> and <span class="soft-bold">HIPAA compliance</span>.</p>
                         </div>
                         <div class="card-img">
                             <img src="static/assets/secure.svg" width="115px">
@@ -144,7 +144,7 @@
                                     <img src="static/assets/handshake.svg">
                                     <p>Dedicated Partnership Program</p>
                                 </div>
-                                <p class="card-text">Powered by predictive modeling and comparative analytics, clinicians can use our platform to validate preclinical findings.</p>
+                                <p class="card-text">We are always happy to collaborate with institutions of any kind, regardless of size, purpose, or specialty.</p>
                             </div>
                             <div class="large-card-footer">
                                 <div class="large-card-footer-title">
@@ -162,7 +162,7 @@
                                 <img src="static/assets/cycle.svg">
                                 <p>Continuous Improvement</p>
                             </div>
-                            <p class="card-text">We integrate with hospital systems enabling interoperability across labs and data consolidation.</p>
+                            <p class="card-text">Our AI <span class="soft-bold">continuously evolves over time</span> with validated clinical data to enhance the accuracy of its predictions.</p>
                         </div>
                         <div class="card-img">
                             <img src="static/assets/brain.svg" width="115px">
@@ -171,7 +171,8 @@
                 </div>
             </div>
         </section>
-
+        
+        <!--
         <section id="how-it-works" class="how-it-works">
             <div class="section-title">
                 <div class="separator"></div>
@@ -231,6 +232,7 @@
                 </div>
             </div>
         </section>
+        -->
 
         <section id="ml-powered-models">
             <div class="section-title">
@@ -243,12 +245,12 @@
                     <div class="card-content">
                         <div class="card-title">
                             <img src="static/assets/eye.svg">
-                            <p>UNA: Cellular Navigator</p>
+                            <p>Genomic Mapping</p>
                         </div>
                         <p class="card-text">
-                            UNA serves as a navigator, delving into the intricate landscapes within a patient's cells. 
+                            Our model <span class="una">UNA</span> serves as a navigator, delving into the intricate landscapes within a patient's cells. 
                             It maps gene interactions, regulatory regions, and cellular behaviors to uncover patterns that 
-                            define health and disease. By creating this comprehensive map, UNA identifies the most promising 
+                            define health and disease. By creating this comprehensive map, we can identify the most promising 
                             targets for therapy, laying the foundation for precision medicine.
                         </p>
                     </div>
@@ -258,12 +260,12 @@
                     <div class="card-content">
                         <div class="card-title">
                             <img src="static/assets/target.svg">
-                            <p>TSAR: Therapy Strategist</p>
+                            <p>Therapy Ranking</p>
                         </div>
                         <p class="card-text">
-                            TSAR is the strategist, piecing together the complex puzzle of a patient's condition. 
+                            In contrast, <span class="tsar">TSAR</span> is the strategist, piecing together the complex puzzle of a patient's condition. 
                             It evaluates and ranks therapies by analyzing the connections between treatments, 
-                            genes, and the patient's biological profile. TSAR's approach ensures the selection 
+                            genes, and the patient's biological profile. This way, we ensure the selection 
                             of optimal treatments, balancing effectiveness with minimal side effects for the best 
                             possible outcomes.
                         </p>
@@ -291,21 +293,21 @@
                         <img src="static/assets/carousel2.png">
                         <div class="carousel-content">
                             <h4>Heterogeneous Graph Networks</h4>
-                            <p>TactusVita employs heterogeneous graph networks to map relationships between therapies, genes, and patient-specific factors. UNA uses these networks to uncover molecular and genomic interactions, while TSAR ranks therapies based on efficacy and compatibility. Together, they enable clinicians and researchers to navigate and analyze complex datasets for more effective decision-making.</p>
+                            <p>TactusVita employs heterogeneous graph networks to map relationships between therapies, genes, and patient-specific factors. <span class="una">UNA</span> uses these networks to uncover molecular and genomic interactions, while <span class="tsar">TSAR</span> ranks therapies based on efficacy and compatibility. Together, they enable clinicians and researchers to navigate and analyze complex datasets for more effective decision-making.</p>
                         </div>
                     </div>
                     <div class="carousel-card">
                         <img src="static/assets/carousel3.png">
                         <div class="carousel-content">
                             <h4>Geometric Deep Learning</h4>
-                            <p>Geometric deep learning powers TactusVita's ability to analyze multi-dimensional data, from tumor progression to cellular pathway dynamics. UNA leverages this technology to identify intricate gene interactions, while TSAR applies it to predict therapy success and toxicity risks. This ensures the platform delivers highly accurate insights for both patient care and clinical trial optimization.</p>
+                            <p>Geometric deep learning powers TactusVita's ability to analyze multi-dimensional data, from tumor progression to cellular pathway dynamics. <span class="una">UNA</span> leverages this technology to identify intricate gene interactions, while <span class="tsar">TSAR</span> applies it to predict therapy success and toxicity risks. This ensures the platform delivers highly accurate insights for both patient care and clinical trial optimization.</p>
                         </div>
                     </div>
                     <div class="carousel-card">
                         <img src="static/assets/carousel4.png">
                         <div class="carousel-content">
                             <h4>Advanced Genomics</h4>
-                            <p>TactusVita integrates advanced genomics by processing in vitro, ex vivo, and in vivo data, including genetic tests, organoid sensitivity assays, and imaging results. UNA analyzes genomic pathways to pinpoint actionable targets, while TSAR uses these findings to rank therapies and refine treatment strategies. This combination accelerates discoveries in precision medicine and enhances outcomes for patients and clinical trials.</p>
+                            <p>TactusVita integrates advanced genomics by processing in vitro, ex vivo, and in vivo data, including genetic tests, organoid sensitivity assays, and imaging results. <span class="una">UNA</span> analyzes genomic pathways to pinpoint actionable targets, while <span class="tsar">TSAR</span> uses these findings to rank therapies and refine treatment strategies. This combination accelerates discoveries in precision medicine and enhances outcomes for patients and clinical trials.</p>
                         </div>
                     </div>
                 </div>
@@ -375,13 +377,15 @@
             </div>
             <div class="headshots">
                 <div class="headshot">
-                    <div class="headshot-main">
-                        <img src="static/headshots/sergio.png">
-                        <div class="headshot-details">
-                            <p class="headshot-name">Sergio Rivera</p>
-                            <p class="headshot-role">Co-founder & CTO</p>
+                    <a href="https://www.linkedin.com/in/sergioriveralopez/">
+                        <div class="headshot-main">
+                            <img src="static/headshots/sergio.png">
+                            <div class="headshot-details">
+                                <p class="headshot-name">Sergio Rivera</p>
+                                <p class="headshot-role">Co-founder & CTO</p>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                     <div class="previous-roles">
                         <p>PREVIOUS ROLES AT</p>
                         <div class="logos">
@@ -391,13 +395,15 @@
                     </div>
                 </div>
                 <div class="headshot">
-                    <div class="headshot-main">
-                        <img src="static/headshots/stefan.jpg">
-                        <div class="headshot-details">
-                            <p class="headshot-name">Stefan Milosevic</p>
-                            <p class="headshot-role">Co-founder & CEO</p>
+                    <a href="https://www.linkedin.com/in/stefan-milosevic-1034b21a3/">
+                        <div class="headshot-main">
+                            <img src="static/headshots/stefan.jpg">
+                            <div class="headshot-details">
+                                <p class="headshot-name">Stefan Milosevic</p>
+                                <p class="headshot-role">Co-founder & CEO</p>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                     <div class="previous-roles">
                         <p>PREVIOUS ROLES AT</p>
                         <div class="logos">
@@ -407,13 +413,15 @@
                     </div>
                 </div>
                 <div class="headshot">
-                    <div class="headshot-main">
-                        <img src="static/headshots/aleks.jpeg">
-                        <div class="headshot-details">
-                            <p class="headshot-name">Aleksandra Markov</p>
-                            <p class="headshot-role">Co-founder & COO</p>
+                    <a href="https://www.linkedin.com/in/aleksandra-markov/">
+                        <div class="headshot-main">
+                            <img src="static/headshots/aleks.jpeg">
+                            <div class="headshot-details">
+                                <p class="headshot-name">Aleksandra Markov</p>
+                                <p class="headshot-role">Co-founder & COO</p>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                     <div class="previous-roles">
                         <p>PREVIOUS ROLES AT</p>
                         <div class="logos">
@@ -429,13 +437,15 @@
             </div>
             <div class="headshots">
                 <div class="headshot">
-                    <div class="headshot-main">
-                        <img src="static/headshots/tomislav.jpeg">
-                        <div class="headshot-details">
-                            <p class="headshot-name">Tomislav Dragovich PhD, MD</p>
-                            <p class="headshot-role">Head Clinical and Translational Advisor</p>
+                    <a href="https://www.linkedin.com/in/tomislav-dragovich-87582866/">
+                        <div class="headshot-main">
+                            <img src="static/headshots/tomislav.jpeg">
+                            <div class="headshot-details">
+                                <p class="headshot-name">Tomislav Dragovich PhD, MD</p>
+                                <p class="headshot-role">Head Clinical and Translational Advisor</p>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                     <div class="previous-roles">
                         <p>IN ASSOCIATION WITH</p>
                         <div class="logos">
@@ -444,13 +454,15 @@
                     </div>
                 </div>
                 <div class="headshot">
-                    <div class="headshot-main">
-                        <img src="static/headshots/nenad.jpg">
-                        <div class="headshot-details">
-                            <p class="headshot-name">Nenad Mijalkovic, MD</p>
-                            <p class="headshot-role">Director and Principal Advisor</p>
+                    <a href="https://www.linkedin.com/in/nenad-mijalkovic-301b4130/">
+                        <div class="headshot-main">
+                            <img src="static/headshots/nenad.jpg">
+                            <div class="headshot-details">
+                                <p class="headshot-name">Nenad Mijalkovic, MD</p>
+                                <p class="headshot-role">Director and Principal Advisor</p>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                     <div class="previous-roles">
                         <p>IN ASSOCIATION WITH</p>
                         <div class="logos">
@@ -459,13 +471,15 @@
                     </div>
                 </div>
                 <div class="headshot">
-                    <div class="headshot-main">
-                        <img src="static/headshots/jelena.jpeg">
-                        <div class="headshot-details">
-                            <p class="headshot-name">Jelena Jevtovic, MD</p>
-                            <p class="headshot-role">Vice Chair of Research and Innovation</p>
+                    <a href="https://www.linkedin.com/in/jelena-jevtovic-40422166/">
+                        <div class="headshot-main">
+                            <img src="static/headshots/jelena.jpeg">
+                            <div class="headshot-details">
+                                <p class="headshot-name">Jelena Jevtovic, MD</p>
+                                <p class="headshot-role">Vice Chair of Research and Innovation</p>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                     <div class="previous-roles">
                         <p>IN ASSOCIATION WITH</p>
                         <div class="logos">
