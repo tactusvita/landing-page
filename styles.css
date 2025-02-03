@@ -938,7 +938,7 @@ nav a {
     }
 
     p {
-        font-size: var(--text-sm) !important;
+        font-size: 0.9rem !important;
     }
 
     .orgs {
